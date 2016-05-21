@@ -16,6 +16,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
     struct MemedObject{
         let topText:String
         let bottomtext:String
@@ -40,6 +42,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         bottomTextField.textAlignment=NSTextAlignment.Center
         topTextField.delegate=self
         bottomTextField.delegate=self
+        shareButton.enabled=false
+        
         
     }
     
@@ -72,6 +76,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         imageView.contentMode=UIViewContentMode.ScaleAspectFit
         imageView.image=selectedImage
         dismissViewControllerAnimated(true, completion: nil)
+        shareButton.enabled=true
         
     }
     
@@ -92,6 +97,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     
     @IBAction func cancelActivity(sender: AnyObject) {
+        shareButton.enabled=false
+        imageView.image=nil
+        topTextField.text="TOP"
+        bottomTextField.text="BOTTOM"
         
     }
     

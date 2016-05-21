@@ -104,6 +104,7 @@
                         <outlet property="bottomTextField" destination="ot6-Kd-Nce" id="VbK-g5-yGy"/>
                         <outlet property="bottomToolbar" destination="vmL-Ad-Uv1" id="gSe-re-XH8"/>
                         <outlet property="imageView" destination="gGg-sN-T6h" id="Pfg-I1-867"/>
+                        <outlet property="shareButton" destination="MET-uE-O7t" id="Asy-gQ-Pkw"/>
                         <outlet property="topTextField" destination="sor-xi-pC2" id="RJG-nZ-SqI"/>
                         <outlet property="topToolbar" destination="Fpf-p6-OSc" id="E9M-UH-URy"/>
                     </connections>
