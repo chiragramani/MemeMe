@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,14 +42,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sor-xi-pC2">
-                                <rect key="frame" x="20" y="119" width="560" height="48"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ot6-Kd-Nce">
-                                <rect key="frame" x="20" y="429" width="560" height="48"/>
+                                <rect key="frame" x="20" y="72" width="560" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
@@ -72,6 +65,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ot6-Kd-Nce">
+                                <rect key="frame" x="20" y="473" width="560" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -82,10 +82,10 @@
                             <constraint firstItem="gGg-sN-T6h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OVh-Ls-Q7A"/>
                             <constraint firstItem="ot6-Kd-Nce" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="PjX-RT-2Hl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vmL-Ad-Uv1" secondAttribute="trailing" constant="-20" id="UOq-Kc-nMF"/>
-                            <constraint firstItem="sor-xi-pC2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="Uni-ff-oUi"/>
+                            <constraint firstItem="sor-xi-pC2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="Uni-ff-oUi"/>
                             <constraint firstAttribute="trailing" secondItem="ot6-Kd-Nce" secondAttribute="trailing" constant="20" symbolic="YES" id="UpH-nz-htG"/>
                             <constraint firstItem="Fpf-p6-OSc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="b4B-pQ-7Jn"/>
-                            <constraint firstItem="vmL-Ad-Uv1" firstAttribute="top" secondItem="ot6-Kd-Nce" secondAttribute="bottom" constant="79" id="bON-Ey-AJH"/>
+                            <constraint firstItem="vmL-Ad-Uv1" firstAttribute="top" secondItem="ot6-Kd-Nce" secondAttribute="bottom" constant="35" id="bON-Ey-AJH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gGg-sN-T6h" secondAttribute="trailing" constant="-20" id="crY-zv-XEG"/>
                             <constraint firstAttribute="trailing" secondItem="sor-xi-pC2" secondAttribute="trailing" constant="20" symbolic="YES" id="dsC-N2-y9J"/>
                             <constraint firstItem="sor-xi-pC2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="mfH-Zw-kMw"/>
@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="bottomTextField" destination="ot6-Kd-Nce" id="VbK-g5-yGy"/>
                         <outlet property="bottomToolbar" destination="vmL-Ad-Uv1" id="gSe-re-XH8"/>
+                        <outlet property="cameraButton" destination="2hY-aZ-5vr" id="5Tf-Ga-tlm"/>
                         <outlet property="imageView" destination="gGg-sN-T6h" id="Pfg-I1-867"/>
                         <outlet property="shareButton" destination="MET-uE-O7t" id="Asy-gQ-Pkw"/>
                         <outlet property="topTextField" destination="sor-xi-pC2" id="RJG-nZ-SqI"/>
@@ -111,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205" y="-141"/>
+            <point key="canvasLocation" x="747" y="-197"/>
         </scene>
     </scenes>
 </document>
