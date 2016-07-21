@@ -12,7 +12,7 @@ This repository contains resources for the MemeMeproject.
 • Used flow layout to properly space the UICollectionViewCells.<br>
 • Features Used: UIImagePickerController, UITableView, UICollectionView and UIActivityViewController.
 ## Setup
-
+ 
 MemeMe should run without any additional setup.
 
 
